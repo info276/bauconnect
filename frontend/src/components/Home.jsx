@@ -330,15 +330,15 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-              {mockData.about.title}
+              {t.about.title}
             </h3>
             <p className="text-lg text-slate-700 max-w-4xl mx-auto leading-relaxed">
-              {mockData.about.description}
+              {t.about.description}
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {mockData.about.values.map((value) => (
-              <div key={value.id} className="text-center">
+            {t.about.values.map((value, index) => (
+              <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="w-8 h-8 border-4 border-white rounded-full"></div>
                 </div>
