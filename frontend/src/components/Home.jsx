@@ -164,24 +164,24 @@ const Home = () => {
         <div className="relative h-[600px] overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${mockData.hero.image})` }}
+            style={{ backgroundImage: `url(${heroImage})` }}
           >
             <div className="absolute inset-0 bg-slate-900/70"></div>
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
             <div className="max-w-3xl">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                {mockData.hero.title}
+                {t.hero.title}
               </h2>
               <p className="text-xl text-slate-200 mb-8">
-                {mockData.hero.subtitle}
+                {t.hero.subtitle}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
                   size="lg" 
                   className="bg-orange-600 hover:bg-orange-700 text-white transition-all duration-200 transform hover:scale-105"
                 >
-                  {mockData.hero.ctaText}
+                  {t.hero.ctaText}
                   <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
@@ -189,7 +189,7 @@ const Home = () => {
                   variant="outline" 
                   className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-slate-800 transition-all duration-200"
                 >
-                  {mockData.hero.ctaSecondary}
+                  {t.hero.ctaSecondary}
                 </Button>
               </div>
             </div>
