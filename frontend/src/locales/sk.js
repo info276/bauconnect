@@ -98,9 +98,9 @@ export const sk = {
     title: "Kontaktujte nás",
     subtitle: "Ste pripravení začať? Kontaktujte nás ešte dnes",
     cta: "Kontaktovať nás",
-    email: "info@bauconnect.sk",
-    phone: "+421 123 456 789",
-    address: "Bratislava, Slovensko",
+    email: "info@bau-connect.eu",
+    phone: "+421 902 134 930",
+    address: "Karpatské námestie 10A, 831 06 Bratislava - Rača",
     labels: {
       email: "Email",
       phone: "Telefón",
