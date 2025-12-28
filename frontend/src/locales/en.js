@@ -98,9 +98,9 @@ export const en = {
     title: "Get in Touch",
     subtitle: "Ready to get started? Contact us today",
     cta: "Contact Us Now",
-    email: "info@bauconnect.com",
-    phone: "+49 (0) 123 456 789",
-    address: "Berlin, Germany",
+    email: "info@bau-connect.eu",
+    phone: "+421 902 134 930",
+    address: "Karpatské námestie 10A, 831 06 Bratislava - Rača",
     labels: {
       email: "Email",
       phone: "Phone",
