@@ -259,18 +259,18 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              {mockData.forCompanies.title}
+              {t.forCompanies.title}
             </h3>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              {mockData.forCompanies.subtitle}
+              {t.forCompanies.subtitle}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {mockData.forCompanies.benefits.map((benefit) => (
-              <Card key={benefit.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            {t.forCompanies.benefits.map((benefit, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src={benefit.image} 
+                    src={benefitImages[index]} 
                     alt={benefit.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
@@ -285,7 +285,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Button size="lg" className="bg-slate-800 hover:bg-slate-900 text-white">
               <Building2 className="mr-2 w-5 h-5" />
-              Partner With Us
+              {t.forCompanies.cta}
             </Button>
           </div>
         </div>
