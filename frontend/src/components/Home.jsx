@@ -121,7 +121,7 @@ const Home = () => {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <nav className="flex flex-col px-4 py-4 space-y-3">
-              {mockData.navigation.map((item, index) => (
+              {t.navigation.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToSection(item.href)}
@@ -130,6 +130,30 @@ const Home = () => {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Language Switcher Mobile */}
+              <div className="pt-3 border-t border-slate-200">
+                <p className="text-xs text-slate-500 mb-2 px-2">Jazyk / Sprache / Language</p>
+                <div className="flex space-x-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        changeLanguage(lang.code);
+                        setMobileMenuOpen(false);
+                      }}
+                      className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                        language === lang.code
+                          ? 'bg-orange-600 text-white'
+                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      }`}
+                    >
+                      <span className="mr-1">{lang.flag}</span>
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </nav>
           </div>
         )}
