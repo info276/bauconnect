@@ -1,25 +1,25 @@
-// Mock data for BAUCONNECT website
+// Mock data pre BAUCONNECT webstránku
 
 export const mockData = {
   company: {
     name: "BAUCONNECT",
-    tagline: "Innovative Building Solutions",
-    description: "Your trusted partner for construction workforce solutions in Germany"
+    tagline: "Inovatívne stavebné riešenia",
+    description: "Váš dôveryhodný partner pre riešenia pracovnej síly v stavebníctve v Nemecku"
   },
   
   navigation: [
-    { label: "Home", href: "#home" },
-    { label: "For Companies", href: "#for-companies" },
-    { label: "For Workers", href: "#for-workers" },
-    { label: "About Us", href: "#about" },
-    { label: "Contact", href: "#contact" }
+    { label: "Domov", href: "#home" },
+    { label: "Pre firmy", href: "#for-companies" },
+    { label: "Pre pracovníkov", href: "#for-workers" },
+    { label: "O nás", href: "#about" },
+    { label: "Kontakt", href: "#contact" }
   ],
   
   hero: {
-    title: "Your Partner for Construction Workforce Solutions in Germany",
-    subtitle: "Connecting qualified construction professionals with leading companies across Germany",
-    ctaText: "Get Started",
-    ctaSecondary: "Learn More",
+    title: "Váš partner pre riešenia pracovnej síly v stavebníctve v Nemecku",
+    subtitle: "Spájame kvalifikovaných stavebných odborníkov s popredným firmami v celom Nemecku",
+    ctaText: "Začať teraz",
+    ctaSecondary: "Zistiť viac",
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85"
   },
   
@@ -27,20 +27,20 @@ export const mockData = {
     {
       id: 1,
       icon: "user-check",
-      title: "Qualified Workers",
-      description: "Access to a network of certified and experienced construction professionals"
+      title: "Kvalifikovaní pracovníci",
+      description: "Prístup k sieti certifikovaných a skúsených stavebných odborníkov"
     },
     {
       id: 2,
       icon: "zap",
-      title: "Fast Placement",
-      description: "Quick and efficient matching process to meet your project deadlines"
+      title: "Rýchle umiestnenie",
+      description: "Rýchly a efektívny proces párovania na splnenie vašich projektových termínov"
     },
     {
       id: 3,
       icon: "handshake",
-      title: "Reliable Service",
-      description: "Dedicated support and quality assurance throughout the entire process"
+      title: "Spoľahlivé služby",
+      description: "Výhradná podpora a zabezpečenie kvality počas celého procesu"
     }
   ],
   
@@ -48,97 +48,97 @@ export const mockData = {
     {
       id: 1,
       number: "50+",
-      label: "Workers Placed",
+      label: "Umiestnených pracovníkov",
       color: "orange"
     },
     {
       id: 2,
       number: "100+",
-      label: "Satisfied Clients",
+      label: "Spokojných klientov",
       color: "blue"
     },
     {
       id: 3,
       number: "15+",
-      label: "Years Experience",
+      label: "Rokov skúseností",
       color: "orange"
     },
     {
       id: 4,
       number: "98%",
-      label: "Success Rate",
+      label: "Úspešnosť",
       color: "blue"
     }
   ],
   
   forCompanies: {
-    title: "For Companies",
-    subtitle: "Find the right talent for your construction projects",
+    title: "Pre firmy",
+    subtitle: "Nájdite správny talent pre vaše stavebné projekty",
     benefits: [
       {
         id: 1,
-        title: "Vetted Professionals",
-        description: "All workers are thoroughly screened and certified",
+        title: "Overení profesionáli",
+        description: "Všetci pracovníci sú dôkladne preverení a certifikovaní",
         image: "https://images.unsplash.com/photo-1558227691-41ea78d1f631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85"
       },
       {
         id: 2,
-        title: "Flexible Solutions",
-        description: "Short-term, long-term, or project-based staffing options",
+        title: "Flexibilné riešenia",
+        description: "Krátkodobé, dlhodobé alebo projektové možnosti obsadzovania",
         image: "https://images.unsplash.com/photo-1742112125567-3e8967bad60f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NjkxMzgxMnww&ixlib=rb-4.1.0&q=85"
       },
       {
         id: 3,
-        title: "Cost-Effective",
-        description: "Competitive rates without compromising on quality",
+        title: "Nákladovo efektívne",
+        description: "Konkurenčné ceny bez kompromisov v kvalite",
         image: "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg"
       }
     ]
   },
   
   forWorkers: {
-    title: "For Workers",
-    subtitle: "Build your career with leading construction companies",
+    title: "Pre pracovníkov",
+    subtitle: "Budujte svoju kariéru s popredným stavebnými firmami",
     benefits: [
       {
         id: 1,
-        title: "Great Opportunities",
-        description: "Access to premium construction projects across Germany"
+        title: "Skvelé príležitosti",
+        description: "Prístup k prémiový stavebným projektom v celom Nemecku"
       },
       {
         id: 2,
-        title: "Fair Compensation",
-        description: "Competitive salaries and benefits packages"
+        title: "Férová odmena",
+        description: "Konkurenčné mzdy a balíky benefitov"
       },
       {
         id: 3,
-        title: "Career Growth",
-        description: "Continuous training and professional development programs"
+        title: "Kariérny rast",
+        description: "Nepretržité vzdelávanie a programy profesionálneho rozvoja"
       },
       {
         id: 4,
-        title: "Full Support",
-        description: "Assistance with documentation, housing, and integration"
+        title: "Plná podpora",
+        description: "Pomoc s dokumentáciou, bývaním a integráciou"
       }
     ]
   },
   
   about: {
-    title: "About BAUCONNECT",
-    description: "BAUCONNECT is a leading workforce solutions provider specializing in the construction industry. With over 15 years of experience, we bridge the gap between skilled construction professionals and companies seeking top talent. Our mission is to facilitate successful partnerships that drive the construction sector forward in Germany.",
+    title: "O BAUCONNECT",
+    description: "BAUCONNECT je popredným poskytovateľom riešení pracovnej sily špecializujúci sa na stavebný priemysel. S viac ako 15-ročnými skúsenosťami preklenujeme priepasť medzi kvalifikovanými stavebnými odborníkmi a firmami, ktoré hľadajú špičkové talenty. Naším poslaním je uľahčiť úspešné partnerstvá, ktoré posúvajú stavebný sektor vpred v Nemecku.",
     values: [
-      { id: 1, title: "Quality", description: "Excellence in every placement" },
-      { id: 2, title: "Trust", description: "Building lasting relationships" },
-      { id: 3, title: "Innovation", description: "Modern solutions for modern needs" },
-      { id: 4, title: "Support", description: "Dedicated service every step" }
+      { id: 1, title: "Kvalita", description: "Excelentnosť v každom umiestnení" },
+      { id: 2, title: "Dôvera", description: "Budovanie trvalých vzťahov" },
+      { id: 3, title: "Inovácia", description: "Moderné riešenia pre moderné potreby" },
+      { id: 4, title: "Podpora", description: "Venovaná služba v každom kroku" }
     ]
   },
   
   contact: {
-    title: "Get in Touch",
-    subtitle: "Ready to get started? Contact us today",
-    email: "info@bauconnect.de",
-    phone: "+49 (0) 123 456 789",
-    address: "Berlin, Germany"
+    title: "Kontaktujte nás",
+    subtitle: "Ste pripravení začať? Kontaktujte nás ešte dnes",
+    email: "info@bauconnect.sk",
+    phone: "+421 123 456 789",
+    address: "Bratislava, Slovensko"
   }
 };
