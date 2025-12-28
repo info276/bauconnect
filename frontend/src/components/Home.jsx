@@ -201,15 +201,16 @@ const Home = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Features</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">{t.features.title}</h3>
             <div className="w-20 h-1 bg-orange-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {mockData.features.map((feature) => {
-              const IconComponent = iconMap[feature.icon];
+            {t.features.items.map((feature, index) => {
+              const icons = [UserCheck, Zap, Handshake];
+              const IconComponent = icons[index];
               return (
                 <div
-                  key={feature.id}
+                  key={index}
                   className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
                   <div className="w-20 h-20 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-6 ring-4 ring-orange-500/20 group-hover:ring-orange-500/40 transition-all duration-300">
