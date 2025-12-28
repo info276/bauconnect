@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { mockData } from '../mock';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { 
   UserCheck, 
   Zap, 
@@ -13,11 +13,14 @@ import {
   MapPin,
   ChevronRight,
   Menu,
-  X
+  X,
+  Globe
 } from 'lucide-react';
 
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const { language, changeLanguage, t } = useLanguage();
 
   const iconMap = {
     'user-check': UserCheck,
