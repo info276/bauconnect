@@ -233,15 +233,15 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Statistics Dashboard</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">{t.statistics.title}</h3>
             <div className="w-20 h-1 bg-orange-600 mx-auto"></div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {mockData.statistics.map((stat) => (
+            {t.statistics.items.map((stat, index) => (
               <div
-                key={stat.id}
+                key={index}
                 className={`p-8 rounded-xl ${
-                  stat.color === 'orange' 
+                  index % 2 === 0
                     ? 'bg-orange-600 text-white' 
                     : 'bg-slate-200 text-slate-800'
                 } hover:scale-105 transition-transform duration-300`}
