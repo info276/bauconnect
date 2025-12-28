@@ -22,12 +22,6 @@ const Home = () => {
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const { language, changeLanguage, t } = useLanguage();
 
-  const iconMap = {
-    'user-check': UserCheck,
-    'zap': Zap,
-    'handshake': Handshake
-  };
-
   const scrollToSection = (href) => {
     setMobileMenuOpen(false);
     const element = document.querySelector(href);
@@ -35,6 +29,20 @@ const Home = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const languages = [
+    { code: 'sk', label: 'SK', flag: '🇸🇰' },
+    { code: 'de', label: 'DE', flag: '🇩🇪' },
+    { code: 'en', label: 'EN', flag: '🇬🇧' }
+  ];
+
+  const heroImage = "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85";
+  
+  const benefitImages = [
+    "https://images.unsplash.com/photo-1558227691-41ea78d1f631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85",
+    "https://images.unsplash.com/photo-1742112125567-3e8967bad60f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NjkxMzgxMnww&ixlib=rb-4.1.0&q=85",
+    "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg"
+  ];
 
   return (
     <div className="min-h-screen bg-white">
