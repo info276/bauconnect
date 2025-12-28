@@ -47,52 +47,40 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center -space-x-1">
-                {/* Dark Blue Chevron */}
-                <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0L20 20L0 40V0Z" fill="#003366"/>
-                </svg>
-                {/* Orange Chevron */}
-                <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 0L26 20L6 40V0Z" fill="#FF9900"/>
-                </svg>
+          <div className="flex flex-col">
+            {/* Top Bar with Logo and Language */}
+            <div className="flex justify-between items-center h-20 border-b border-slate-100">
+              {/* Logo */}
+              <div className="flex items-center space-x-3">
+                <div className="flex items-center -space-x-1">
+                  {/* Dark Blue Chevron */}
+                  <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L20 20L0 40V0Z" fill="#003366"/>
+                  </svg>
+                  {/* Orange Chevron */}
+                  <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0L26 20L6 40V0Z" fill="#FF9900"/>
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-slate-800">{t.company.name}</h1>
+                  <p className="text-xs text-slate-600">{t.company.tagline}</p>
+                </div>
               </div>
-              <div>
-                <h1 className="text-2xl font-bold text-slate-800">{t.company.name}</h1>
-                <p className="text-xs text-slate-600">{t.company.tagline}</p>
-              </div>
-            </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {t.navigation.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`text-sm font-medium transition-all duration-200 hover:text-orange-600 ${
-                    index === 0 ? 'text-orange-600 border-b-2 border-orange-600 pb-1' : 'text-slate-700'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-              
               {/* Language Switcher Desktop */}
-              <div className="relative">
+              <div className="hidden md:block relative">
                 <button
                   onClick={() => setLangMenuOpen(!langMenuOpen)}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors"
+                  className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors"
                 >
-                  <Globe className="w-4 h-4 text-slate-600" />
-                  <span className="text-sm font-medium text-slate-700 uppercase">{language}</span>
+                  <Globe className="w-5 h-5 text-slate-600" />
+                  <span className="text-sm font-semibold text-slate-700 uppercase">{language}</span>
                 </button>
                 {langMenuOpen && (
-                  <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+                  <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-xl border border-slate-200 py-1 z-50">
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
@@ -101,7 +89,7 @@ const Home = () => {
                           setLangMenuOpen(false);
                         }}
                         className={`w-full px-4 py-2 text-left text-sm hover:bg-slate-100 transition-colors flex items-center space-x-2 ${
-                          language === lang.code ? 'bg-orange-50 text-orange-600' : 'text-slate-700'
+                          language === lang.code ? 'bg-orange-50 text-orange-600 font-semibold' : 'text-slate-700'
                         }`}
                       >
                         <span>{lang.flag}</span>
@@ -111,15 +99,32 @@ const Home = () => {
                   </div>
                 )}
               </div>
-            </nav>
 
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              {/* Mobile menu button */}
+              <button
+                className="md:hidden p-2"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+
+            {/* Desktop Navigation - Centered and Larger */}
+            <nav className="hidden md:flex items-center justify-center h-16 space-x-1">
+              {t.navigation.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`px-6 py-2 text-base font-semibold transition-all duration-300 rounded-lg ${
+                    index === 0 
+                      ? 'text-orange-600 bg-orange-50' 
+                      : 'text-slate-700 hover:text-orange-600 hover:bg-orange-50'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
           </div>
         </div>
 
