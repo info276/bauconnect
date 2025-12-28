@@ -53,20 +53,20 @@ const Home = () => {
             {/* Top Bar with Logo and Language */}
             <div className="flex justify-between items-center h-20 border-b border-slate-100">
               {/* Logo */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-4">
                 <div className="flex items-center -space-x-1">
                   {/* Dark Blue Chevron */}
-                  <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="40" height="50" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L20 20L0 40V0Z" fill="#003366"/>
                   </svg>
                   {/* Orange Chevron */}
-                  <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="40" height="50" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0L26 20L6 40V0Z" fill="#FF9900"/>
                   </svg>
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-800">{t.company.name}</h1>
-                  <p className="text-xs text-slate-600">{t.company.tagline}</p>
+                  <h1 className="text-3xl font-bold text-slate-800">{t.company.name}</h1>
+                  <p className="text-sm text-slate-600">{t.company.tagline}</p>
                 </div>
               </div>
 
