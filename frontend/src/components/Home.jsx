@@ -57,14 +57,14 @@ const Home = () => {
                 <div className="w-8 h-10 bg-gradient-to-r from-orange-500 to-orange-600 transform -skew-x-12 -ml-2"></div>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-slate-800">{mockData.company.name}</h1>
-                <p className="text-xs text-slate-600">{mockData.company.tagline}</p>
+                <h1 className="text-2xl font-bold text-slate-800">{t.company.name}</h1>
+                <p className="text-xs text-slate-600">{t.company.tagline}</p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              {mockData.navigation.map((item, index) => (
+              {t.navigation.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToSection(item.href)}
@@ -75,6 +75,36 @@ const Home = () => {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Language Switcher Desktop */}
+              <div className="relative">
+                <button
+                  onClick={() => setLangMenuOpen(!langMenuOpen)}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors"
+                >
+                  <Globe className="w-4 h-4 text-slate-600" />
+                  <span className="text-sm font-medium text-slate-700 uppercase">{language}</span>
+                </button>
+                {langMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          changeLanguage(lang.code);
+                          setLangMenuOpen(false);
+                        }}
+                        className={`w-full px-4 py-2 text-left text-sm hover:bg-slate-100 transition-colors flex items-center space-x-2 ${
+                          language === lang.code ? 'bg-orange-50 text-orange-600' : 'text-slate-700'
+                        }`}
+                      >
+                        <span>{lang.flag}</span>
+                        <span>{lang.label}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </nav>
 
             {/* Mobile menu button */}
