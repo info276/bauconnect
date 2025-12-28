@@ -171,7 +171,7 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20">
+      <section id="home" className="pt-36">
         <div className="relative h-[600px] overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
