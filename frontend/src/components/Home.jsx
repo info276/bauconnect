@@ -296,16 +296,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              {mockData.forWorkers.title}
+              {t.forWorkers.title}
             </h3>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              {mockData.forWorkers.subtitle}
+              {t.forWorkers.subtitle}
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {mockData.forWorkers.benefits.map((benefit) => (
+            {t.forWorkers.benefits.map((benefit, index) => (
               <div
-                key={benefit.id}
+                key={index}
                 className="bg-slate-50 p-6 rounded-xl border-2 border-transparent hover:border-orange-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
@@ -319,7 +319,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
               <Users className="mr-2 w-5 h-5" />
-              Apply Now
+              {t.forWorkers.cta}
             </Button>
           </div>
         </div>
