@@ -354,29 +354,29 @@ const Home = () => {
       <section id="contact" className="py-20 bg-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">{mockData.contact.title}</h3>
-            <p className="text-xl text-slate-300">{mockData.contact.subtitle}</p>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.contact.title}</h3>
+            <p className="text-xl text-slate-300">{t.contact.subtitle}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
               <Mail className="w-12 h-12 text-orange-500 mb-4" />
-              <h4 className="font-semibold mb-2">Email</h4>
-              <p className="text-slate-300 text-sm">{mockData.contact.email}</p>
+              <h4 className="font-semibold mb-2">{t.contact.labels.email}</h4>
+              <p className="text-slate-300 text-sm">{t.contact.email}</p>
             </div>
             <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
               <Phone className="w-12 h-12 text-orange-500 mb-4" />
-              <h4 className="font-semibold mb-2">Phone</h4>
-              <p className="text-slate-300 text-sm">{mockData.contact.phone}</p>
+              <h4 className="font-semibold mb-2">{t.contact.labels.phone}</h4>
+              <p className="text-slate-300 text-sm">{t.contact.phone}</p>
             </div>
             <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
               <MapPin className="w-12 h-12 text-orange-500 mb-4" />
-              <h4 className="font-semibold mb-2">Location</h4>
-              <p className="text-slate-300 text-sm">{mockData.contact.address}</p>
+              <h4 className="font-semibold mb-2">{t.contact.labels.location}</h4>
+              <p className="text-slate-300 text-sm">{t.contact.address}</p>
             </div>
           </div>
           <div className="text-center mt-12">
             <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-              Contact Us Now
+              {t.contact.cta}
             </Button>
           </div>
         </div>
@@ -387,12 +387,14 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm">&copy; 2025 {mockData.company.name}. All rights reserved.</p>
+              <p className="text-sm">&copy; {t.footer.copyright}</p>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-sm hover:text-orange-500 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-sm hover:text-orange-500 transition-colors">Terms of Service</a>
-              <a href="#" className="text-sm hover:text-orange-500 transition-colors">Imprint</a>
+              {t.footer.links.map((link, index) => (
+                <a key={index} href={link.href} className="text-sm hover:text-orange-500 transition-colors">
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
