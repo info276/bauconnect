@@ -52,9 +52,15 @@ const Home = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="flex items-center">
-                <div className="w-8 h-10 bg-gradient-to-r from-slate-700 to-slate-800 transform -skew-x-12"></div>
-                <div className="w-8 h-10 bg-gradient-to-r from-orange-500 to-orange-600 transform -skew-x-12 -ml-2"></div>
+              <div className="flex items-center -space-x-1">
+                {/* Dark Blue Chevron */}
+                <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L20 20L0 40V0Z" fill="#003366"/>
+                </svg>
+                {/* Orange Chevron */}
+                <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0L26 20L6 40V0Z" fill="#FF9900"/>
+                </svg>
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-slate-800">{t.company.name}</h1>
