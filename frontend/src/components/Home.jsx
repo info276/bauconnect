@@ -362,33 +362,158 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-800 text-white">
+      <section id="contact" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.contact.title}</h3>
-            <p className="text-xl text-slate-300">{t.contact.subtitle}</p>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">{t.contact.title}</h3>
+            <p className="text-xl text-slate-600">{t.contact.subtitle}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
-              <Mail className="w-12 h-12 text-orange-500 mb-4" />
-              <h4 className="font-semibold mb-2">{t.contact.labels.email}</h4>
-              <p className="text-slate-300 text-sm">{t.contact.email}</p>
+
+          {/* Contact Info Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+            <div className="flex flex-col items-center p-6 bg-slate-50 rounded-xl hover:shadow-lg transition-shadow">
+              <Mail className="w-12 h-12 text-orange-600 mb-4" />
+              <h4 className="font-semibold mb-2 text-slate-800">{t.contact.labels.email}</h4>
+              <a href={`mailto:${t.contact.email}`} className="text-orange-600 text-sm hover:underline">{t.contact.email}</a>
             </div>
-            <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
-              <Phone className="w-12 h-12 text-orange-500 mb-4" />
-              <h4 className="font-semibold mb-2">{t.contact.labels.phone}</h4>
-              <p className="text-slate-300 text-sm">{t.contact.phone}</p>
+            <div className="flex flex-col items-center p-6 bg-slate-50 rounded-xl hover:shadow-lg transition-shadow">
+              <Phone className="w-12 h-12 text-orange-600 mb-4" />
+              <h4 className="font-semibold mb-2 text-slate-800">{t.contact.labels.phone}</h4>
+              <a href={`tel:${t.contact.phone}`} className="text-orange-600 text-sm hover:underline">{t.contact.phone}</a>
             </div>
-            <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
-              <MapPin className="w-12 h-12 text-orange-500 mb-4" />
-              <h4 className="font-semibold mb-2">{t.contact.labels.location}</h4>
-              <p className="text-slate-300 text-sm">{t.contact.address}</p>
+            <div className="flex flex-col items-center p-6 bg-slate-50 rounded-xl hover:shadow-lg transition-shadow">
+              <MapPin className="w-12 h-12 text-orange-600 mb-4" />
+              <h4 className="font-semibold mb-2 text-slate-800">{t.contact.labels.location}</h4>
+              <p className="text-slate-600 text-sm text-center">{t.contact.address}</p>
             </div>
           </div>
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-              {t.contact.cta}
-            </Button>
+
+          {/* Contact Forms */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Form for Companies */}
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-slate-800 text-white">
+                <CardTitle className="flex items-center">
+                  <Building2 className="w-6 h-6 mr-2" />
+                  {t.contact.companyFormTitle}
+                </CardTitle>
+                <CardDescription className="text-slate-300">{t.contact.companyFormSubtitle}</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6">
+                <form action={`mailto:${t.contact.email}`} method="POST" encType="text/plain" className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.company}</label>
+                    <input 
+                      type="text" 
+                      name="company"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.name}</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.email}</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.phone}</label>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.message}</label>
+                    <textarea 
+                      name="message"
+                      rows="4"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
+                    ></textarea>
+                  </div>
+                  <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-900 text-white">
+                    {t.contact.formLabels.submit}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+
+            {/* Form for Workers */}
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-orange-600 text-white">
+                <CardTitle className="flex items-center">
+                  <Users className="w-6 h-6 mr-2" />
+                  {t.contact.workerFormTitle}
+                </CardTitle>
+                <CardDescription className="text-orange-100">{t.contact.workerFormSubtitle}</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6">
+                <form action={`mailto:${t.contact.emailWorkers}`} method="POST" encType="text/plain" className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.name}</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.email}</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.phone}</label>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.position}</label>
+                    <input 
+                      type="text" 
+                      name="position"
+                      placeholder="napr. Murár, Elektrikár..."
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.formLabels.message}</label>
+                    <textarea 
+                      name="message"
+                      rows="4"
+                      required
+                      className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
+                    ></textarea>
+                  </div>
+                  <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                    {t.contact.formLabels.submit}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
