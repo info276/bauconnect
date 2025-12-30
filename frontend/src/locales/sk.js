@@ -5,6 +5,7 @@ export const sk = {
   },
   navigation: [
     { label: "Domov", href: "#home" },
+    { label: "Ponuky", href: "/jobs" },
     { label: "Pre firmy", href: "#for-companies" },
     { label: "Pre pracovníkov", href: "#for-workers" },
     { label: "O nás", href: "#about" },
