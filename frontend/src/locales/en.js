@@ -14,8 +14,10 @@ export const en = {
   hero: {
     title: "Your Partner for Construction Workforce Solutions in Germany",
     subtitle: "Connecting qualified construction professionals with leading companies across Germany",
-    ctaText: "Get Started",
-    ctaSecondary: "Learn More"
+    ctaTextCompany: "Get Workers Within 48 Hours",
+    ctaTextWorker: "Find Work in Germany Today",
+    ctaSecondary: "Learn More",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85"
   },
   features: {
     title: "Features",
