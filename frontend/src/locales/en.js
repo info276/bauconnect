@@ -5,6 +5,7 @@ export const en = {
   },
   navigation: [
     { label: "Home", href: "#home" },
+    { label: "Job Offers", href: "/jobs" },
     { label: "For Companies", href: "#for-companies" },
     { label: "For Workers", href: "#for-workers" },
     { label: "About Us", href: "#about" },
