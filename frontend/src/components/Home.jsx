@@ -295,71 +295,15 @@ const Home = () => {
               </Card>
             ))}
           </div>
-          
-          {/* Contact Form for Companies */}
-          <div className="mt-16 max-w-2xl mx-auto">
-            <Card className="overflow-hidden shadow-xl">
-              <CardHeader className="bg-slate-800 text-white">
-                <CardTitle className="text-2xl text-center">{t.contact.companyFormTitle}</CardTitle>
-                <CardDescription className="text-slate-300 text-center">{t.contact.companyFormSubtitle}</CardDescription>
-              </CardHeader>
-              <CardContent className="p-8">
-                <form action={`mailto:${t.contact.email}`} method="POST" encType="text/plain" className="space-y-5">
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.company} *</label>
-                      <input 
-                        type="text" 
-                        name="company"
-                        required
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.name} *</label>
-                      <input 
-                        type="text" 
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.email} *</label>
-                      <input 
-                        type="email" 
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.phone}</label>
-                      <input 
-                        type="tel" 
-                        name="phone"
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.message} *</label>
-                    <textarea 
-                      name="message"
-                      rows="5"
-                      required
-                      className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all resize-none"
-                    ></textarea>
-                  </div>
-                  <Button type="submit" size="lg" className="w-full bg-slate-800 hover:bg-slate-900 text-white py-6 text-lg">
-                    <Building2 className="mr-2 w-5 h-5" />
-                    {t.contact.formLabels.submit}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              onClick={() => navigate('/company-contact')}
+              className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-6 text-lg"
+            >
+              <Building2 className="mr-2 w-5 h-5" />
+              {t.forCompanies.cta}
+            </Button>
           </div>
         </div>
       </section>
