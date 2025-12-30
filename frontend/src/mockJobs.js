@@ -1,0 +1,78 @@
+// Mock job offers data
+export const mockJobOffers = [
+  {
+    id: "1",
+    lokalita: "Winsen, Nemecko",
+    typ_prace: "Fasádnici – montáž Prefa fasád na hliníkovú konštrukciu, rezanie, úpravy, montáž drevených latiek, všetky potrebné dokončovacie práce",
+    pocet_pracovnikov: "3 + 1",
+    zaciatok: "podľa dohody",
+    hodinova_sazba: "dohodou",
+    poziadavky: "Prax v odbore, 1 pracovník nemecky hovoriaci, samostatnosť",
+    vybavenie: "Pracovné náradie a OOPP (PSA, bezpečnostná obuv S3)",
+    praca_v_sobotu: "áno",
+    ubytovanie: "podľa dohody",
+    splatnost: "Informácie budú upresnené pri osobnom kontakte",
+    created_at: "2025-12-30T10:00:00",
+    is_active: true
+  },
+  {
+    id: "2",
+    lokalita: "Mníchov, Nemecko",
+    typ_prace: "Murári – murárske práce na rekonštrukcii bytových domov, obkladanie, omietanie",
+    pocet_pracovnikov: "5",
+    zaciatok: "ihneď",
+    hodinova_sazba: "18-20 €/hod",
+    poziadavky: "Minimálne 3 roky praxe, komunikácia v nemčine výhodou",
+    vybavenie: "Základné náradie vlastné",
+    praca_v_sobotu: "podľa dohody",
+    ubytovanie: "zabezpečené",
+    splatnost: "Výplata každé 2 týždne",
+    created_at: "2025-12-29T14:30:00",
+    is_active: true
+  },
+  {
+    id: "3",
+    lokalita: "Hamburg, Nemecko",
+    typ_prace: "Elektrikári – inštalácia elektrických rozvodov v novostavbách",
+    pocet_pracovnikov: "2",
+    zaciatok: "1.1.2026",
+    hodinova_sazba: "22 €/hod",
+    poziadavky: "Elektrikársky výučný list, skúsenosti s novostavbami",
+    vybavenie: "Kompletné vybavenie poskytnuté",
+    praca_v_sobotu: "nie",
+    ubytovanie: "možné zabezpečiť",
+    splatnost: "Mesačná výplata",
+    created_at: "2025-12-29T09:15:00",
+    is_active: true
+  },
+  {
+    id: "4",
+    lokalita: "Frankfurt, Nemecko",
+    typ_prace: "Tesári – montáž strešnej konštrukcie, práca s drevenými trámami",
+    pocet_pracovnikov: "4",
+    zaciatok: "15.1.2026",
+    hodinova_sazba: "19-21 €/hod",
+    poziadavky: "Skúsenosti s krovovými konštrukciami, práca vo výškach",
+    vybavenie: "Základné náradie vlastné, bezpečnostné vybavenie poskytnuté",
+    praca_v_sobotu: "áno",
+    ubytovanie: "zabezpečené",
+    splatnost: "Výplata každý mesiac",
+    created_at: "2025-12-28T16:45:00",
+    is_active: true
+  },
+  {
+    id: "5",
+    lokalita: "Berlín, Nemecko",
+    typ_prace: "Sadrokartónári – montáž sadrokartónových stien a stropov",
+    pocet_pracovnikov: "3",
+    zaciatok: "ihneď",
+    hodinova_sazba: "17-19 €/hod",
+    poziadavky: "Minimálne 2 roky praxe, rýchla a kvalitná práca",
+    vybavenie: "Vlastné náradie potrebné",
+    praca_v_sobotu: "podľa dohody",
+    ubytovanie: "možné za poplatok",
+    splatnost: "Týždenná alebo dvojtýždenná výplata",
+    created_at: "2025-12-28T11:20:00",
+    is_active: true
+  }
+];
