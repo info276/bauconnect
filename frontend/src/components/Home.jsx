@@ -484,9 +484,13 @@ const Home = () => {
             </div>
             <div className="flex space-x-6">
               {t.footer.links.map((link, index) => (
-                <a key={index} href={link.href} className="text-sm hover:text-orange-500 transition-colors">
+                <button
+                  key={index}
+                  onClick={() => navigate(link.href)}
+                  className="text-sm hover:text-orange-500 transition-colors"
+                >
                   {link.label}
-                </a>
+                </button>
               ))}
             </div>
           </div>
