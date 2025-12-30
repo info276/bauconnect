@@ -7,7 +7,7 @@ export const en = {
     { label: "Home", href: "#home" },
     { label: "For Companies", href: "#for-companies" },
     { label: "For Workers", href: "#for-workers" },
-    { label: "Job Offers", href: "/jobs" },
+    { label: "Current Job Offers", href: "/jobs" },
     { label: "About Us", href: "#about" },
     { label: "Contact", href: "#contact" }
   ],
