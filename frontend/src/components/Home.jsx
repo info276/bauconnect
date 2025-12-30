@@ -380,7 +380,7 @@ const Home = () => {
           </div>
 
           {/* Contact Info Cards */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex flex-col items-center p-6 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
               <Mail className="w-12 h-12 text-orange-500 mb-4" />
               <h4 className="font-semibold mb-2">{t.contact.labels.email}</h4>
@@ -396,26 +396,6 @@ const Home = () => {
               <h4 className="font-semibold mb-2">{t.contact.labels.location}</h4>
               <p className="text-slate-300 text-sm text-center">{t.contact.address}</p>
             </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-            <Button 
-              size="lg" 
-              onClick={() => navigate('/company-contact')}
-              className="bg-white text-slate-800 hover:bg-slate-100 flex-1"
-            >
-              <Building2 className="mr-2 w-5 h-5" />
-              Pre firmy
-            </Button>
-            <Button 
-              size="lg" 
-              onClick={() => navigate('/worker-contact')}
-              className="bg-orange-600 hover:bg-orange-700 text-white flex-1"
-            >
-              <Users className="mr-2 w-5 h-5" />
-              Pre pracovníkov
-            </Button>
           </div>
         </div>
       </section>
