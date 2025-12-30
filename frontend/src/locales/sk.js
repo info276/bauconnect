@@ -17,7 +17,7 @@ export const sk = {
     ctaSecondary: "Zistiť viac"
   },
   features: {
-    title: "Features",
+    title: "Naše služby",
     items: [
       {
         title: "Kvalifikovaní pracovníci",
@@ -34,7 +34,7 @@ export const sk = {
     ]
   },
   statistics: {
-    title: "Statistics Dashboard",
+    title: "Naše čísla",
     items: [
       { number: "50+", label: "Umiestnených pracovníkov" },
       { number: "100+", label: "Spokojných klientov" },
