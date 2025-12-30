@@ -347,6 +347,71 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Job Offers Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+              Aktuálne pracovné ponuky
+            </h3>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Najnovšie príležitosti pre našich pracovníkov v Nemecku
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mockJobOffers.slice(0, 3).map((job) => (
+              <Card key={job.id} className="hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-orange-500">
+                <CardHeader className="bg-gradient-to-r from-orange-50 to-slate-50">
+                  <CardTitle className="text-lg font-bold text-slate-800 flex items-center">
+                    <Building2 className="w-5 h-5 mr-2 text-orange-600" />
+                    {job.lokalita}
+                  </CardTitle>
+                  <CardDescription className="text-slate-700 font-medium line-clamp-2">
+                    {job.typ_prace}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-6 space-y-3">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-slate-600 font-medium">Počet:</span>
+                    <span className="text-slate-800 font-semibold">{job.pocet_pracovnikov}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-slate-600 font-medium">Začiatok:</span>
+                    <span className="text-slate-800 font-semibold">{job.zaciatok}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-slate-600 font-medium">Sazba:</span>
+                    <span className="text-orange-600 font-bold">{job.hodinova_sazba}</span>
+                  </div>
+                  <div className="pt-3 border-t border-slate-200">
+                    <p className="text-xs text-slate-600 font-medium mb-1">Požiadavky:</p>
+                    <p className="text-sm text-slate-700 line-clamp-2">{job.poziadavky}</p>
+                  </div>
+                  <Button 
+                    onClick={() => navigate('/worker-contact')}
+                    className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white"
+                  >
+                    Mám záujem
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              onClick={() => navigate('/jobs')}
+              variant="outline"
+              className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+            >
+              Zobraziť všetky ponuky ({mockJobOffers.length})
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
