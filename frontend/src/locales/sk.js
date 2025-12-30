@@ -128,9 +128,8 @@ export const sk = {
   footer: {
     copyright: "2025 BAUCONNECT. Všetky práva vyhradené.",
     links: [
-      { label: "Ochrana súkromia", href: "#" },
-      { label: "Podmienky služby", href: "#" },
-      { label: "Imprint", href: "#" }
+      { label: "Ochrana súkromia", href: "/privacy" },
+      { label: "Podmienky služby", href: "/terms" }
     ]
   }
 };
