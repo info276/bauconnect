@@ -128,9 +128,8 @@ export const de = {
   footer: {
     copyright: "2025 BAUCONNECT. Alle Rechte vorbehalten.",
     links: [
-      { label: "Datenschutz", href: "#" },
-      { label: "AGB", href: "#" },
-      { label: "Impressum", href: "#" }
+      { label: "Datenschutz", href: "/privacy" },
+      { label: "AGB", href: "/terms" }
     ]
   }
 };
