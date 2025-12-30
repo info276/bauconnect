@@ -197,20 +197,22 @@ const Home = () => {
               <p className="text-xl text-slate-200 mb-8">
                 {t.hero.subtitle}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-orange-600 hover:bg-orange-700 text-white transition-all duration-200 transform hover:scale-105"
+                  onClick={() => navigate('/company-contact')}
+                  className="bg-slate-800 hover:bg-slate-900 text-white transition-all duration-200 transform hover:scale-105 shadow-xl"
                 >
-                  {t.hero.ctaText}
-                  <ChevronRight className="ml-2 w-5 h-5" />
+                  <Building2 className="mr-2 w-5 h-5" />
+                  {t.hero.ctaTextCompany}
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-slate-800 transition-all duration-200"
+                  onClick={() => navigate('/worker-contact')}
+                  className="bg-orange-600 hover:bg-orange-700 text-white transition-all duration-200 transform hover:scale-105 shadow-xl"
                 >
-                  {t.hero.ctaSecondary}
+                  <Users className="mr-2 w-5 h-5" />
+                  {t.hero.ctaTextWorker}
                 </Button>
               </div>
             </div>
