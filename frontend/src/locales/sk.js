@@ -14,8 +14,10 @@ export const sk = {
   hero: {
     title: "Váš partner pre riešenia pracovnej síly v stavebníctve v Nemecku",
     subtitle: "Spájame kvalifikovaných stavebných odborníkov s popredným firmami v celom Nemecku",
-    ctaText: "Začať teraz",
-    ctaSecondary: "Zistiť viac"
+    ctaTextCompany: "Získajte pracovníkov do 48 hodín",
+    ctaTextWorker: "Nájdite si prácu v Nemecku ešte dnes",
+    ctaSecondary: "Zistiť viac",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85"
   },
   features: {
     title: "Naše služby",
