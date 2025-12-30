@@ -7,7 +7,7 @@ export const de = {
     { label: "Startseite", href: "#home" },
     { label: "Für Unternehmen", href: "#for-companies" },
     { label: "Für Arbeitnehmer", href: "#for-workers" },
-    { label: "Stellenangebote", href: "/jobs" },
+    { label: "Aktuelle Stellenangebote", href: "/jobs" },
     { label: "Über uns", href: "#about" },
     { label: "Kontakt", href: "#contact" }
   ],
