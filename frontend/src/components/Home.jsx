@@ -22,6 +22,7 @@ const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const { language, changeLanguage, t } = useLanguage();
+  const navigate = useNavigate();
 
   const scrollToSection = (href) => {
     setMobileMenuOpen(false);
