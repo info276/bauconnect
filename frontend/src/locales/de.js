@@ -5,6 +5,7 @@ export const de = {
   },
   navigation: [
     { label: "Startseite", href: "#home" },
+    { label: "Angebote", href: "/jobs" },
     { label: "Für Unternehmen", href: "#for-companies" },
     { label: "Für Arbeitnehmer", href: "#for-workers" },
     { label: "Über uns", href: "#about" },
