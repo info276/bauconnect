@@ -128,9 +128,8 @@ export const en = {
   footer: {
     copyright: "2025 BAUCONNECT. All rights reserved.",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Imprint", href: "#" }
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" }
     ]
   }
 };
