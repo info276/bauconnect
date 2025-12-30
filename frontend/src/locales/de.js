@@ -98,7 +98,22 @@ export const de = {
     title: "Kontakt aufnehmen",
     subtitle: "Bereit loszulegen? Kontaktieren Sie uns noch heute",
     cta: "Jetzt kontaktieren",
+    companyFormTitle: "Für Unternehmen",
+    companyFormSubtitle: "Suchen Sie qualifizierte Arbeitskräfte?",
+    workerFormTitle: "Für Arbeitnehmer",
+    workerFormSubtitle: "Suchen Sie Arbeit im Bauwesen?",
+    formLabels: {
+      name: "Vor- und Nachname",
+      email: "E-Mail",
+      phone: "Telefon",
+      company: "Firmenname",
+      position: "Position",
+      message: "Nachricht",
+      submit: "Absenden",
+      sending: "Wird gesendet..."
+    },
     email: "info@bau-connect.eu",
+    emailWorkers: "office@bau-connect.eu",
     phone: "+421 902 134 930",
     address: "Karpatské námestie 10A, 831 06 Bratislava - Rača",
     labels: {
