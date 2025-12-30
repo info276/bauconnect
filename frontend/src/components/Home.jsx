@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { 
