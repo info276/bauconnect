@@ -333,72 +333,15 @@ const Home = () => {
               </div>
             ))}
           </div>
-          
-          {/* Contact Form for Workers */}
-          <div className="mt-16 max-w-2xl mx-auto">
-            <Card className="overflow-hidden shadow-xl">
-              <CardHeader className="bg-orange-600 text-white">
-                <CardTitle className="text-2xl text-center">{t.contact.workerFormTitle}</CardTitle>
-                <CardDescription className="text-orange-100 text-center">{t.contact.workerFormSubtitle}</CardDescription>
-              </CardHeader>
-              <CardContent className="p-8">
-                <form action={`mailto:${t.contact.emailWorkers}`} method="POST" encType="text/plain" className="space-y-5">
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.name} *</label>
-                      <input 
-                        type="text" 
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-orange-600 transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.email} *</label>
-                      <input 
-                        type="email" 
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-orange-600 transition-all"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.phone} *</label>
-                      <input 
-                        type="tel" 
-                        name="phone"
-                        required
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-orange-600 transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.position}</label>
-                      <input 
-                        type="text" 
-                        name="position"
-                        placeholder="napr. Murár, Elektrikár..."
-                        className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-orange-600 transition-all"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">{t.contact.formLabels.message} *</label>
-                    <textarea 
-                      name="message"
-                      rows="5"
-                      required
-                      className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-orange-600 transition-all resize-none"
-                    ></textarea>
-                  </div>
-                  <Button type="submit" size="lg" className="w-full bg-orange-600 hover:bg-orange-700 text-white py-6 text-lg">
-                    <Users className="mr-2 w-5 h-5" />
-                    {t.contact.formLabels.submit}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              onClick={() => navigate('/worker-contact')}
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg"
+            >
+              <Users className="mr-2 w-5 h-5" />
+              {t.forWorkers.cta}
+            </Button>
           </div>
         </div>
       </section>
