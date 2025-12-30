@@ -27,9 +27,16 @@ const Home = () => {
 
   const scrollToSection = (href) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    
+    // Check if it's an internal link (starts with #) or external route
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to external route
+      navigate(href);
     }
   };
 
