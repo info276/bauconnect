@@ -5,9 +5,9 @@ export const de = {
   },
   navigation: [
     { label: "Startseite", href: "#home" },
-    { label: "Angebote", href: "/jobs" },
     { label: "Für Unternehmen", href: "#for-companies" },
     { label: "Für Arbeitnehmer", href: "#for-workers" },
+    { label: "Stellenangebote", href: "/jobs" },
     { label: "Über uns", href: "#about" },
     { label: "Kontakt", href: "#contact" }
   ],
