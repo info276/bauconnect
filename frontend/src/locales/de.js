@@ -14,8 +14,10 @@ export const de = {
   hero: {
     title: "Ihr Partner für Baufachkräfte-Lösungen in Deutschland",
     subtitle: "Wir verbinden qualifizierte Bauprofis mit führenden Unternehmen in ganz Deutschland",
-    ctaText: "Jetzt starten",
-    ctaSecondary: "Mehr erfahren"
+    ctaTextCompany: "Fachkräfte innerhalb von 48 Stunden",
+    ctaTextWorker: "Finden Sie noch heute Arbeit in Deutschland",
+    ctaSecondary: "Mehr erfahren",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2NjkxMzgwNnww&ixlib=rb-4.1.0&q=85"
   },
   features: {
     title: "Features",
